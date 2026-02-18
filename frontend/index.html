@@ -5,12 +5,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Typing Speed Test</h1>
-    <p id="sentence"></p>
-    <textarea id="input"></textarea><br>
-    <button onclick="submitTest()">Submit</button>
-    <p id="result"></p>
-
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+        <p class="subtitle">Test your typing speed and accuracy</p>
+        <p id="sentence"></p>
+        <textarea id="input" placeholder="Start typing here..."></textarea><br>
+        <button onclick="submitTest()">Submit</button>
+        <div class="results">
+            <div class="result-card">
+                <div class="value" id="wpm">--</div>
+                <div class="label">WPM</div>
+            </div>
+            <div class="result-card">
+                <div class="value" id="accuracy">--</div>
+                <div class="label">Accuracy</div>
+            </div>
+            <div class="result-card">
+                <div class="value" id="time">--</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
