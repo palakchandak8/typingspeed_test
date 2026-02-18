@@ -1,8 +1,115 @@
-body {
-    font-family: Arial;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #e94560, #0f3460);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+#sentence {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    color: #e0e0e0;
+    min-height: 50px;
+}
+
 textarea {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    padding: 15px;
+    resize: none;
+    outline: none;
+    transition: border 0.3s;
+}
+
+textarea:focus {
+    border-color: #e94560;
+}
+
+button {
+    margin-top: 20px;
+    padding: 14px 50px;
+    background: linear-gradient(90deg, #e94560, #c62a47);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.4);
+}
+
+.results {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 15px 25px;
+    min-width: 130px;
+}
+
+.result-card .value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.result-card .label {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
 }
